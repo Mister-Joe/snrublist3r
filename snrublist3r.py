@@ -77,7 +77,8 @@ def parse_args():
     return args
 
 
-def main(args):
+def main():
+    args = parse_args()
     v = Verbosity()
     verbosity_level = v.level(verbose=args.verbosity, debug=args.debug, silent=args.silent)
 
@@ -164,5 +165,4 @@ def main(args):
             break
 
 if __name__ == "__main__":
-    args = parse_args()
-    main(args)
+    main()
